@@ -51,6 +51,5 @@ class WavSpider(scrapy.Spider):
 
     def save_file(self, response):
         path = response.url.split('/')[-1]
-        print path
-        # with open(path, 'wb') as f:
-        #     f.write(response.body)
+        with open(path, 'wb') as f:
+            f.write(response.body)
